@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Amor Hello Kitty</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fcd5e1; /* Color de fondo inspirado en Hello Kitty */
+    }
+
+    .card {
+      cursor: pointer;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .love-letter {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    /* Estilo inspirado en Hello Kitty */
+    h2, p, button {
+      color: #ff3385; /* Color rosa de Hello Kitty */
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente lúdica */
+    }
+
+    button {
+      background-color: #ff3385;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card" onclick="openLoveLetter()">
+  <img src="foto/hello_kitty_foto.jpg" alt="Hello Kitty" width="50" height="50"> <!-- Añadir la imagen de Hello Kitty -->
+  <h2>¡Haz clic aquí mailove!</h2>
+</div>
+
+<div class="love-letter" id="loveLetter">
+  <img src="foto/naruto_hinata_anime.jpg_375107843.webp" alt="Hello Kitty" width="100" height="100"> <!-- Añadir la imagen de Hello Kitty -->
+  <h2>Querida Derly Yulieth,</h2>
+  <p>Eres la luz de mi vida y cada día contigo es un regalo. Tu amor llena mi corazón de alegría y felicidad.</p>
+  <p>No hay palabras suficientes para expresar lo agradecido que estoy de tenerte a mi lado. Eres mi todo.</p>
+  <p>Con todo mi amor,</p>
+  <p>Jhoan Stiven...</p>
+  <button onclick="closeLoveLetter()">Cerrar</button>
+</div>
+
+<script>
+  function openLoveLetter() {
+    document.getElementById('loveLetter').style.display = 'block';
+  }
+
+  function closeLoveLetter() {
+    document.getElementById('loveLetter').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
